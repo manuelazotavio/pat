@@ -14,8 +14,9 @@ jobs:
         username: "ubuntu"
         key: ${{ secrets.SSH_KEY }}
         script: |
-          cd /home/ubuntu/pat
-          git pull origin main
+          cd /home/ubuntu/pat 
+          git fetch --all
+          git reset --hard origin/main
           npm install
           pm2 stop bot-pat || true
           sleep 10
