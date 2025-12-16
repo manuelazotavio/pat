@@ -1,0 +1,20 @@
+name: Deploy na AWS
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy via SSH
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: "ubuntu"
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd /home/ubuntu/pat
+          git pull origin main
+          npm install
+          pm2 restart bot-pat
