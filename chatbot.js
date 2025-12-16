@@ -1,12 +1,17 @@
 const qrcode = require("qrcode-terminal");
 const vagas = require("./vagas_caragua.json");
-const { Client } = require("whatsapp-web.js");
+const { Client, LocalAuth } = require("whatsapp-web.js");
 
 
 const client = new Client({
+
+  authStrategy: new LocalAuth({
+    clientId: "bot-pat-client",
+    dataPath: "/home/ubuntu/pat/.wwebjs_auth"
+  }),
   puppeteer: {
     headless: true,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage", "--disable-accelerated-2d-canvas", "--no-first-run", "--no-zygote", "--single-process", "--disable-gpu"],
   },
 });
 
