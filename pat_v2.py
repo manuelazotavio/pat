@@ -4,6 +4,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import json
 import time
+import os
+import shutil
 
 def tratar_vagas(vagas):
     vagas_tratadas = []
@@ -70,6 +72,13 @@ for vaga in vagas_formatadas:
 print(vagas)
 
 print(json.dumps(vagas_formatadas, indent=4, ensure_ascii=False))
+
+arquivo_atual = "vagas_caragua.json"
+arquivo_anterior = "vagas_anterior.json"
+
+if os.path.exists(arquivo_atual):
+    shutil.copy(arquivo_atual, arquivo_anterior)
+    print("Backup das vagas anteriores realizado com sucesso!")
 
 with open('vagas_caragua.json', 'w', encoding='utf-8') as f:
     json.dump(vagas_formatadas, f, ensure_ascii=False, indent=4)

@@ -1,6 +1,26 @@
 const qrcode = require("qrcode-terminal");
 const vagas = require("./vagas_caragua.json");
+
 const { Client, LocalAuth } = require("whatsapp-web.js");
+let vagasAnteriores = [];
+try {
+  vagasAnteriores = require("./vagas_anterior.json");
+} catch (e) {
+  console.log(
+    "Arquivo de vagas anteriores ainda não existe. Tudo será considerado novo."
+  );
+}
+
+function filtrarNovas(atuais, antigas) {
+  if (!antigas || antigas.length === 0) return atuais;
+
+  return atuais.filter((vagaAtual) => {
+    const existia = antigas.some(
+      (vagaAntiga) => vagaAntiga.codigo === vagaAtual.codigo
+    );
+    return !existia;
+  });
+}
 
 const client = new Client({
   authStrategy: new LocalAuth({
@@ -42,7 +62,7 @@ client.on("disconnected", (reason) => {
 });
 
 client.on("loading_screen", (percent, message) => {
-    console.log(`⏳ Carregando: ${percent}% - ${message}`);
+  console.log(`⏳ Carregando: ${percent}% - ${message}`);
 });
 
 client.on("ready", () => console.log("WhatsApp conectado."));
@@ -127,7 +147,8 @@ client.on("message", async (msg) => {
         "Como você gostaria de procurar as vagas?\n\n" +
           "*1* - Filtrar por etapas (gênero, experiência, etc.)\n" +
           '*2* - Pesquisar pelo nome da vaga (ex: "auxiliar")\n' +
-          "*3* - Ver todas as vagas disponíveis"
+          "*3* - Ver todas as vagas disponíveis\n" +
+          "*4* - Ver apenas vagas NOVAS."
       );
       return;
     } else if (!sess.search_method) {
@@ -158,8 +179,30 @@ client.on("message", async (msg) => {
             'Para uma nova busca, digite "menu".'
         );
         delete sessions[id];
+      } else if (text === "4") {
+        const chat = await msg.getChat();
+        await chat.sendStateTyping();
+        await delay(1000);
+
+        const novas = filtrarNovas(vagas, vagasAnteriores);
+
+        if (novas.length > 0) {
+          await msg.reply(
+            `Encontrei *${novas.length}* vagas novas desde a última atualização!`
+          );
+          await msg.reply(formatarVagas(novas));
+        } else {
+          await msg.reply(
+            "Não há vagas novas em relação à lista anterior. As vagas continuam as mesmas."
+          );
+        }
+
+        await msg.reply(
+          'Para ver a lista completa, digite "menu" e escolha a opção 3.'
+        );
+        delete sessions[id];
       } else {
-        await msg.reply("Opção inválida. Por favor, digite *1*, *2* ou *3*.");
+        await msg.reply("Opção inválida. Por favor, digite *1*, *2*, *3* ou *4*.");
       }
       return;
     } else if (sess.search_method === "filter") {
