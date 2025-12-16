@@ -14,7 +14,9 @@ jobs:
         username: "ubuntu"
         key: ${{ secrets.SSH_KEY }}
         script: |
-          cd /home/ubuntu/pat
+          cd /home/ubuntu/pat # ou o seu caminho correto
           git pull origin main
           npm install
-          pm2 restart bot-pat
+          pm2 stop bot-pat || true
+          sleep 10
+          pm2 start bot-pat
