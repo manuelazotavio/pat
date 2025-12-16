@@ -13,7 +13,7 @@ async function carregarGuias() {
   const rows = [];
 
   sheet.eachRow({ includeEmpty: false }, (row, i) => {
-    if (i === 1) return; // cabeçalho
+    if (i === 1) return; 
 
     const city = row.getCell(3).text.trim();
     if (city.toLowerCase() !== "caraguatatuba") return;
@@ -33,7 +33,6 @@ async function carregarGuias() {
   console.log(`✅ ${rows.length} guias carregados para memória.`);
 }
 
-// Formata pro WhatsApp
 function formatarGuias(lista) {
   if (!lista.length) return "Nenhum guia encontrado.";
   return lista
@@ -49,7 +48,7 @@ function formatarGuias(lista) {
     .join("\n\n");
 }
 
-// Filtra os guias
+
 function filtrar(guias, { segmento, idioma }) {
   return guias.filter((g) => {
     console.log(segmento);
@@ -63,12 +62,11 @@ function filtrar(guias, { segmento, idioma }) {
   });
 }
 
-// QR e inicialização
 client.on("qr", (qr) => qrcode.generate(qr, { small: true }));
 client.on("ready", () => console.log("📲 WhatsApp conectado."));
 client.initialize();
 
-// Comando pra recarregar planilha manualmente
+
 client.on("message", async (msg) => {
   if (msg.body.trim().toLowerCase() === "atualizar guias") {
     await carregarGuias();
@@ -76,7 +74,6 @@ client.on("message", async (msg) => {
   }
 });
 
-// Fluxo do chatbot
 client.on("message", async (msg) => {
   if (!msg.from.endsWith("@c.us")) return;
   const id = msg.from;
@@ -159,5 +156,4 @@ client.on("message", async (msg) => {
   }
 });
 
-// Carrega planilha antes de iniciar
 carregarGuias();
