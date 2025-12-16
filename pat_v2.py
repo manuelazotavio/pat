@@ -1,8 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.keys import Keys
 import json
 import time
 
@@ -21,15 +20,17 @@ def tratar_vagas(vagas):
         }
         vagas_tratadas.append(vaga_tratada)
     return vagas_tratadas
+options = Options()
+options.add_argument('--headless') 
+options.add_argument('--no-sandbox') 
+options.add_argument('--disable-dev-shm-usage') 
+options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
 
-options = webdriver.ChromeOptions()
+mes = time.strftime("%m")
+service = Service() 
+driver = webdriver.Chrome(service=service, options=options)
 
-options.add_argument(r"user-data-dir=C:\Users\Manuela Otavio\AppData\Local\Google\Chrome\User Data\SeleniumProfile")
-
-service = Service()
-driver = webdriver.Chrome(service = service, options = options)
-
-url = "https://www.caraguatatuba.sp.gov.br/pmc/2025/06/vagas-disponiveis/"
+url = f"https://www.caraguatatuba.sp.gov.br/pmc/vagas-no-pat/"
 
 driver.get(url)
 
