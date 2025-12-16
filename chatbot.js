@@ -1,5 +1,27 @@
 const qrcode = require("qrcode-terminal");
 const vagas = require("./vagas_caragua.json");
+const fs = require("fs");
+const schedule = require("node-schedule");
+
+const ARQUIVO_ALERTAS = "./alertas.json";
+let listaAlertas = [];
+
+try {
+  if (fs.existsSync(ARQUIVO_ALERTAS)) {
+    listaAlertas = JSON.parse(fs.readFileSync(ARQUIVO_ALERTAS));
+  }
+} catch (e) {
+  console.error("Erro ao carregar alertas:", e);
+}
+
+function salvarAlerta(numero, termo) {
+  listaAlertas = listaAlertas.filter(
+    (a) => !(a.numero === numero && a.termo === termo)
+  );
+
+  listaAlertas.push({ numero, termo });
+  fs.writeFileSync(ARQUIVO_ALERTAS, JSON.stringify(listaAlertas, null, 2));
+}
 
 const { Client, LocalAuth } = require("whatsapp-web.js");
 let vagasAnteriores = [];
@@ -66,6 +88,47 @@ client.on("loading_screen", (percent, message) => {
 });
 
 client.on("ready", () => console.log("WhatsApp conectado."));
+
+async function verificarEDispararAlertas() {
+  console.log("⏰ Iniciando verificação diária de alertas...");
+
+  const vagasAtualizadas = require("./vagas_caragua.json");
+
+  for (const alerta of listaAlertas) {
+    const termo = alerta.termo.toLowerCase();
+
+    const vagasEncontradas = vagasAtualizadas.filter((v) =>
+      v.ocupacao.toLowerCase().includes(termo)
+    );
+
+    if (vagasEncontradas.length > 0) {
+      const msg =
+        `🚨 *Alerta de Vaga: ${alerta.termo.toUpperCase()}*\n\n` +
+        `Encontrei oportunidades hoje para você!\n\n` +
+        formatarVagas(vagasEncontradas);
+
+      try {
+        await client.sendMessage(alerta.numero, msg);
+        console.log(
+          `✅ Alerta enviado para ${alerta.numero} (${alerta.termo})`
+        );
+        await delay(2000);
+      } catch (err) {
+        console.error(`Falha ao enviar para ${alerta.numero}:`, err);
+      }
+    }
+  }
+  console.log("🏁 Fim do disparo de alertas.");
+}
+
+schedule.scheduleJob("0 9 * * *", () => {
+  verificarEDispararAlertas();
+});
+
+schedule.scheduleJob("0 16 * * *", () => {
+  verificarEDispararAlertas();
+});
+
 client.initialize();
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
@@ -148,7 +211,8 @@ client.on("message", async (msg) => {
           "*1* - Filtrar por etapas (gênero, experiência, etc.)\n" +
           '*2* - Pesquisar pelo nome da vaga (ex: "auxiliar")\n' +
           "*3* - Ver todas as vagas disponíveis\n" +
-          "*4* - Ver apenas vagas NOVAS."
+          "*4* - Ver apenas vagas NOVAS.\n" +
+          "*5* - Receber alertas diários quando surgir vagas."
       );
       return;
     } else if (!sess.search_method) {
@@ -201,8 +265,17 @@ client.on("message", async (msg) => {
           'Para ver a lista completa, digite "menu" e escolha a opção 3.'
         );
         delete sessions[id];
+      } else if (text === "5") {
+        sess.search_method = "alert";
+        await msg.reply(
+          "🔔 *Criar Alerta de Vaga*\n\n" +
+            "Digite o nome da profissão que você quer receber alertas (ex: Motorista, Recepcionista).\n" +
+            "Todo dia de manhã, se houver essa vaga, eu te mando uma mensagem!"
+        );
       } else {
-        await msg.reply("Opção inválida. Por favor, digite *1*, *2*, *3* ou *4*.");
+        await msg.reply(
+          "Opção inválida. Por favor, digite *1*, *2*, *3* ou *4*."
+        );
       }
       return;
     } else if (sess.search_method === "filter") {
@@ -288,6 +361,13 @@ client.on("message", async (msg) => {
           'Para uma nova busca, digite "menu".'
       );
       delete sessions[id];
+    } else if (sess.search_method === "alert") {
+        const termo = text;
+        
+        salvarAlerta(id, termo);
+        
+        await msg.reply(`✅ Feito! Criei um alerta para *"${termo}"*.\nAssim que aparecer uma vaga com esse nome na lista diária, eu te aviso.`);
+        delete sessions[id];
     }
   } catch (err) {
     console.error(`❌ ERRO FATAL ao processar msg de ${msg.from}:`, err);
