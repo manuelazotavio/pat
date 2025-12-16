@@ -41,6 +41,10 @@ client.on("disconnected", (reason) => {
   console.warn("⚠️ O WhatsApp desconectou! Motivo:", reason);
 });
 
+client.on("loading_screen", (percent, message) => {
+    console.log(`⏳ Carregando: ${percent}% - ${message}`);
+});
+
 client.on("ready", () => console.log("WhatsApp conectado."));
 client.initialize();
 
