@@ -144,7 +144,7 @@ client.on("message", async (msg) => {
       }
       await msg.reply(
         "Legal! Agora, digite 1, 2 ou 3 para filtrar a necessidade de experiência:\n" +
-          "1 - Com experiência\n" +
+          "1 - Com experiência!\n" +
           "2 - Sem experiência\n" +
           "3 - Ambos"
       );
