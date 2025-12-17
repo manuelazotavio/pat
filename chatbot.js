@@ -193,6 +193,8 @@ client.on("message", async (msg) => {
     const text = msg.body.trim().toLowerCase();
     const sess = sessions[id];
 
+    if (!msg.body) return;
+
     if (!sess || text === "menu" || text === "oi" || text === "olá") {
       console.log(`👤 [NOVA SESSÃO] Usuário ${id} iniciou conversa.`);
       sessions[id] = {
