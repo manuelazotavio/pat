@@ -183,7 +183,6 @@ function filtrarPorNome(vagas, termo) {
 
 client.on("message", async (msg) => {
   try {
-    if (!msg.from.endsWith("@c.us")) return;
 
     console.log(
       `📩 [RECEBIDO] De: ${msg.from} | Tipo: ${
@@ -193,8 +192,6 @@ client.on("message", async (msg) => {
     const id = msg.from;
     const text = msg.body.trim().toLowerCase();
     const sess = sessions[id];
-
-    if (!msg.body) return;
 
     if (!sess || text === "menu" || text === "oi" || text === "olá") {
       console.log(`👤 [NOVA SESSÃO] Usuário ${id} iniciou conversa.`);
