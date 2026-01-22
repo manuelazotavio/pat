@@ -1,36 +1,65 @@
 const qrcode = require("qrcode-terminal");
-const vagas = require("./vagas_caragua.json");
+const { exec } = require("child_process");
 const fs = require("fs");
 const schedule = require("node-schedule");
+const { Client, LocalAuth } = require("whatsapp-web.js");
 
 const ARQUIVO_ALERTAS = "./alertas.json";
 let listaAlertas = [];
+
+process.on("uncaughtException", (err) => {
+  console.error(err);
+});
+
+process.on("unhandledRejection", (reason, promise) => {
+  console.error(reason);
+});
 
 try {
   if (fs.existsSync(ARQUIVO_ALERTAS)) {
     listaAlertas = JSON.parse(fs.readFileSync(ARQUIVO_ALERTAS));
   }
 } catch (e) {
-  console.error("Erro ao carregar alertas:", e);
+  console.error(e);
+}
+
+function carregarVagasAtualizadas() {
+  try {
+    const data = fs.readFileSync("./vagas_caragua.json", "utf8");
+    return JSON.parse(data);
+  } catch (err) {
+    console.error(err);
+    return [];
+  }
+}
+
+function rodarScraperPython() {
+  exec("python3 scraping.py", (error, stdout, stderr) => {
+    if (error) {
+      console.error(error);
+      return;
+    }
+    if (stderr) {
+      console.error(stderr);
+    }
+    console.log(stdout);
+  });
 }
 
 function salvarAlerta(numero, termo) {
   listaAlertas = listaAlertas.filter(
-    (a) => !(a.numero === numero && a.termo === termo)
+    (a) => !(a.numero === numero && a.termo === termo),
   );
 
   listaAlertas.push({ numero, termo });
   fs.writeFileSync(ARQUIVO_ALERTAS, JSON.stringify(listaAlertas, null, 2));
 }
 
-const { Client, LocalAuth } = require("whatsapp-web.js");
 let vagasAnteriores = [];
 try {
   vagasAnteriores = require("./vagas_anterior.json");
 } catch (e) {
-  console.log(
-    "Arquivo de vagas anteriores ainda não existe. Tudo será considerado novo."
-  );
+  console.log(e);
 }
 
 function filtrarNovas(atuais, antigas) {
@@ -38,7 +67,7 @@ function filtrarNovas(atuais, antigas) {
 
   return atuais.filter((vagaAtual) => {
     const existia = antigas.some(
-      (vagaAntiga) => vagaAntiga.codigo === vagaAtual.codigo
+      (vagaAntiga) => vagaAntiga.codigo === vagaAtual.codigo,
     );
     return !existia;
   });
@@ -74,36 +103,31 @@ const sessions = {};
 client.on("qr", (qr) => qrcode.generate(qr, { small: true }));
 
 client.on("authenticated", () => {
-  console.log("✅ Autenticado com sucesso! Sessão recuperada/criada.");
+  console.log("✅ Autenticado com sucesso!");
 });
 
 client.on("auth_failure", (msg) => {
-  console.error(
-    "❌ Falha na autenticação. Apague a pasta .wwebjs_auth e reinicie.",
-    msg
-  );
+  console.error(msg);
 });
 
 client.on("disconnected", (reason) => {
-  console.warn("⚠️ O WhatsApp desconectou! Motivo:", reason);
+  console.warn(reason);
 });
 
 client.on("loading_screen", (percent, message) => {
-  console.log(`⏳ Carregando: ${percent}% - ${message}`);
+  console.log(`${percent}% - ${message}`);
 });
 
 client.on("ready", () => console.log("WhatsApp conectado."));
 
 async function verificarEDispararAlertas() {
-  console.log("⏰ Iniciando verificação diária de alertas...");
-
-  const vagasAtualizadas = require("./vagas_caragua.json");
+  const vagasAtualizadas = carregarVagasAtualizadas();
 
   for (const alerta of listaAlertas) {
     const termo = alerta.termo.toLowerCase();
 
     const vagasEncontradas = vagasAtualizadas.filter((v) =>
-      v.ocupacao.toLowerCase().includes(termo)
+      v.ocupacao.toLowerCase().includes(termo),
     );
 
     if (vagasEncontradas.length > 0) {
@@ -114,17 +138,17 @@ async function verificarEDispararAlertas() {
 
       try {
         await client.sendMessage(alerta.numero, msg);
-        console.log(
-          `✅ Alerta enviado para ${alerta.numero} (${alerta.termo})`
-        );
         await delay(2000);
       } catch (err) {
-        console.error(`Falha ao enviar para ${alerta.numero}:`, err);
+        console.error(err);
       }
     }
   }
-  console.log("🏁 Fim do disparo de alertas.");
 }
+
+schedule.scheduleJob("50 8 * * *", () => {
+  rodarScraperPython();
+});
 
 schedule.scheduleJob("0 9 * * *", () => {
   verificarEDispararAlertas();
@@ -152,13 +176,13 @@ function formatarVagas(lista) {
         `📚 Escolaridade: ${v.nivel_instrucao}\n` +
         `⏳ Experiência: ${v.experiencia_meses}\n` +
         `👥 Vagas: ${v.quantidade_vagas}\n` +
-        `----------------------`
+        `----------------------`,
     )
     .join("\n\n");
 }
 
-function filtrar(vagas, { gender, exp, school }) {
-  return vagas.filter((v) => {
+function filtrar(vagasList, { gender, exp, school }) {
+  return vagasList.filter((v) => {
     if (gender === "M" && !["M", "Masculino", "Ambos"].includes(v.sexo))
       return false;
     if (gender === "F" && !["F", "Feminino", "Ambos"].includes(v.sexo))
@@ -181,20 +205,19 @@ function filtrar(vagas, { gender, exp, school }) {
   });
 }
 
-function filtrarPorNome(vagas, termo) {
+function filtrarPorNome(vagasList, termo) {
   const termoBusca = termo.toLowerCase();
-  return vagas.filter((v) => v.ocupacao.toLowerCase().includes(termoBusca));
+  return vagasList.filter((v) => v.ocupacao.toLowerCase().includes(termoBusca));
 }
 
 client.on("message", async (msg) => {
   try {
-
     if (msg.from === "status@broadcast") return;
 
     console.log(
       `📩 [RECEBIDO] De: ${msg.from} | Tipo: ${
         msg.type
-      } | Body: ${msg.body.slice(0, 50)}...`
+      } | Body: ${msg.body.slice(0, 50)}...`,
     );
     const id = msg.from;
     const text = msg.body.trim().toLowerCase();
@@ -203,7 +226,6 @@ client.on("message", async (msg) => {
     if (!msg.body) return;
 
     if (!sess || text === "menu" || text === "oi" || text === "olá") {
-      console.log(`👤 [NOVA SESSÃO] Usuário ${id} iniciou conversa.`);
       sessions[id] = {
         search_method: null,
         gender: null,
@@ -218,7 +240,7 @@ client.on("message", async (msg) => {
           '*2* - Pesquisar pelo nome da vaga (ex: "auxiliar")\n' +
           "*3* - Ver todas as vagas disponíveis\n" +
           "*4* - Ver apenas vagas NOVAS.\n" +
-          "*5* - Receber alertas diários quando surgir vagas."
+          "*5* - Receber alertas diários quando surgir vagas.",
       );
       return;
     } else if (!sess.search_method) {
@@ -229,24 +251,25 @@ client.on("message", async (msg) => {
             "Primeiro, escolha o gênero:\n" +
             "1 - Masculinas\n" +
             "2 - Femininas\n" +
-            "3 - Ambos"
+            "3 - Ambos",
         );
       } else if (text === "2") {
         sess.search_method = "name";
         await msg.reply(
-          "Digite o nome ou termo da vaga que você procura (ex: auxiliar, vendedor, limpeza)."
+          "Digite o nome ou termo da vaga que você procura (ex: auxiliar, vendedor, limpeza).",
         );
       } else if (text === "3") {
         const chat = await msg.getChat();
         await chat.sendStateTyping();
         await delay(1000);
 
-        await msg.reply(formatarVagas(vagas));
+        const vagasFrescas = carregarVagasAtualizadas();
+        await msg.reply(formatarVagas(vagasFrescas));
         await msg.reply(
           "Busca finalizada! Se a vaga que procura estiver na lista, não esqueça:\n" +
             "Leve RG, CPF, currículo e o código da vaga.\n" +
             "Endereço do PAT: R. Taubaté, 520 - Sumaré, Caraguatatuba (08h–16h).\n\n" +
-            'Para uma nova busca, digite "menu".'
+            'Para uma nova busca, digite "menu".',
         );
         delete sessions[id];
       } else if (text === "4") {
@@ -254,21 +277,22 @@ client.on("message", async (msg) => {
         await chat.sendStateTyping();
         await delay(1000);
 
-        const novas = filtrarNovas(vagas, vagasAnteriores);
+        const vagasFrescas = carregarVagasAtualizadas();
+        const novas = filtrarNovas(vagasFrescas, vagasAnteriores);
 
         if (novas.length > 0) {
           await msg.reply(
-            `Encontrei *${novas.length}* vagas novas desde a última atualização!`
+            `Encontrei *${novas.length}* vagas novas desde a última atualização!`,
           );
           await msg.reply(formatarVagas(novas));
         } else {
           await msg.reply(
-            "Não há vagas novas em relação à lista anterior. As vagas continuam as mesmas."
+            "Não há vagas novas em relação à lista anterior. As vagas continuam as mesmas.",
           );
         }
 
         await msg.reply(
-          'Para ver a lista completa, digite "menu" e escolha a opção 3.'
+          'Para ver a lista completa, digite "menu" e escolha a opção 3.',
         );
         delete sessions[id];
       } else if (text === "5") {
@@ -276,11 +300,11 @@ client.on("message", async (msg) => {
         await msg.reply(
           "🔔 *Criar Alerta de Vaga*\n\n" +
             "Digite o nome da profissão que você quer receber alertas (ex: Motorista, Recepcionista).\n" +
-            "Todo dia de manhã, se houver essa vaga, eu te mando uma mensagem!"
+            "Todo dia de manhã, se houver essa vaga, eu te mando uma mensagem!",
         );
       } else {
         await msg.reply(
-          "Opção inválida. Por favor, digite *1*, *2*, *3* ou *4*."
+          "Opção inválida. Por favor, digite *1*, *2*, *3* ou *4*.",
         );
       }
       return;
@@ -291,7 +315,7 @@ client.on("message", async (msg) => {
         else if (text === "3" || text === "ambos") sess.gender = "A";
         else {
           await msg.reply(
-            "Não entendi. Digite 1, 2 ou 3 para escolher o gênero."
+            "Não entendi. Digite 1, 2 ou 3 para escolher o gênero.",
           );
           return;
         }
@@ -299,7 +323,7 @@ client.on("message", async (msg) => {
           "Legal! Agora, digite 1, 2 ou 3 para filtrar a necessidade de experiência:\n" +
             "1 - Com experiência!\n" +
             "2 - Sem experiência\n" +
-            "3 - Ambos"
+            "3 - Ambos",
         );
         return;
       }
@@ -310,7 +334,7 @@ client.on("message", async (msg) => {
         else if (text === "3" || text.includes("ambos")) sess.exp = "ambos";
         else {
           await msg.reply(
-            "Ops, resposta inválida. Digite 1, 2 ou 3 para experiência."
+            "Ops, resposta inválida. Digite 1, 2 ou 3 para experiência.",
           );
           return;
         }
@@ -318,7 +342,7 @@ client.on("message", async (msg) => {
           "Show! Por fim, digite 1, 2 ou 3 para filtrar a necessidade de escolaridade:\n" +
             "1 - Com escolaridade\n" +
             "2 - Sem escolaridade\n" +
-            "3 - Ambos"
+            "3 - Ambos",
         );
         return;
       }
@@ -341,13 +365,14 @@ client.on("message", async (msg) => {
           exp: sess.exp === "ambos" ? null : sess.exp,
           school: sess.school === "ambos" ? null : sess.school,
         };
-        const resultado = filtrar(vagas, filtro);
+        const vagasFrescas = carregarVagasAtualizadas();
+        const resultado = filtrar(vagasFrescas, filtro);
         await msg.reply(formatarVagas(resultado));
         await msg.reply(
           "Busca finalizada! Se a vaga que procura estiver na lista, não esqueça:\n" +
             "Leve RG, CPF, currículo e o código da vaga.\n" +
             "Endereço do PAT: R. Taubaté, 520 - Sumaré, Caraguatatuba (08h–16h).\n\n" +
-            'Para uma nova busca, digite "menu".'
+            'Para uma nova busca, digite "menu".',
         );
         delete sessions[id];
       }
@@ -357,23 +382,26 @@ client.on("message", async (msg) => {
       await delay(1000);
 
       const termoBusca = text;
-      const resultado = filtrarPorNome(vagas, termoBusca);
+      const vagasFrescas = carregarVagasAtualizadas();
+      const resultado = filtrarPorNome(vagasFrescas, termoBusca);
 
       await msg.reply(formatarVagas(resultado));
       await msg.reply(
         "Busca finalizada! Se a vaga que procura estiver na lista, não esqueça:\n" +
           "Leve RG, CPF, currículo e o código da vaga.\n" +
           "Endereço do PAT: R. Taubaté, 520 - Sumaré, Caraguatatuba (08h–16h).\n\n" +
-          'Para uma nova busca, digite "menu".'
+          'Para uma nova busca, digite "menu".',
       );
       delete sessions[id];
     } else if (sess.search_method === "alert") {
-        const termo = text;
-        
-        salvarAlerta(id, termo);
-        
-        await msg.reply(`✅ Feito! Criei um alerta para *"${termo}"*.\nAssim que aparecer uma vaga com esse nome na lista diária, eu te aviso.`);
-        delete sessions[id];
+      const termo = text;
+
+      salvarAlerta(id, termo);
+
+      await msg.reply(
+        `✅ Feito! Criei um alerta para *"${termo}"*.\nAssim que aparecer uma vaga com esse nome na lista diária, eu te aviso.`,
+      );
+      delete sessions[id];
     }
   } catch (err) {
     console.error(`❌ ERRO FATAL ao processar msg de ${msg.from}:`, err);
