@@ -15,9 +15,19 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd /home/ubuntu/pat 
+  
+          cp alertas.json alertas.bkp.json || true
+
           git fetch --all
           git reset --hard origin/main
+       
+          mv alertas.bkp.json alertas.json || true
+    
           npm install
+          pip3 install -r requirements.txt || pip3 install selenium webdriver-manager
+          
           pm2 stop bot-pat || true
-          sleep 10
-          pm2 start bot-pat
+          sleep 5
+         
+          pm2 start chatbot.js --name bot-pat
+          pm2 save
