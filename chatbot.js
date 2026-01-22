@@ -49,6 +49,11 @@ const client = new Client({
     clientId: "bot-pat-client",
     dataPath: "/home/ubuntu/pat/.wwebjs_auth",
   }),
+  webVersionCache: {
+    type: "remote",
+    remotePath:
+      "https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2412.54.html",
+  },
   puppeteer: {
     headless: true,
     args: [
@@ -185,7 +190,7 @@ client.on("message", async (msg) => {
   try {
 
     if (msg.from === "status@broadcast") return;
-    
+
     console.log(
       `📩 [RECEBIDO] De: ${msg.from} | Tipo: ${
         msg.type
