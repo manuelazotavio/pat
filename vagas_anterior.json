@@ -1,217 +1,597 @@
 [
     {
-        "codigo": "8420417",
-        "ocupacao": "Açougueiro com experiência comprovada em Carteira de Trabalho – possuir conhecimento em cortes de carne, disponibilidade de horário e disponibilidade para trabalhar na escala 6×1.",
+        "codigo": "8524387",
+        "ocupacao": "Açougueiro – possuir disponibilidade de horário.",
         "quantidade_vagas": 2,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
+        "regiao": "Sumaré, Olaria, Getuba, Massaguaçu ou Tabatinga",
         "sexo": "Ambos",
-        "salario": "R$ 3.000,00"
+        "salario": "R$ 2.018,00 + Insalubridade"
     },
     {
-        "codigo": "8461900",
-        "ocupacao": "Advogado (Home Office) – possuir experiência na área cível.",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Superior Completo em Direito",
-        "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
-        "sexo": "Ambos",
-        "salario": "Piso da Categoria"
-    },
-    {
-        "codigo": "8470804",
-        "ocupacao": "Ajudante de Cozinha em Pastelaria",
+        "codigo": "8669088",
+        "ocupacao": "Açougueiro – possuir disponibilidade para trabalhar na escala 6×1.",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 1.790,00"
+        "salario": "R$ 2.600,00"
     },
     {
-        "codigo": "8371968",
-        "ocupacao": "Ajudante de Serralheiro com experiência comprovada em Carteira de Trabalho",
+        "codigo": "8785708",
+        "ocupacao": "Agente Administrativo",
         "quantidade_vagas": 1,
-        "nivel_instrucao": "Não exige",
-        "experiencia_meses": "6 meses",
-        "regiao": "Perequê Mirim",
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
         "sexo": "M",
-        "salario": "R$ 1.959,02"
+        "salario": "R$ 1.978,00"
     },
     {
-        "codigo": "8121061",
-        "ocupacao": "Ajudante Geral (Oficina Mecânica) com experiência comprovada em Carteira de Trabalho",
+        "codigo": "8710626",
+        "ocupacao": "Ajudante de Cozinha",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
-        "experiencia_meses": "6 meses",
-        "regiao": "Perequê Mirim",
-        "sexo": "M",
-        "salario": "R$ 1.959,02"
-    },
-    {
-        "codigo": "8475605",
-        "ocupacao": "Almoxarife com experiência comprovada em Carteira de Trabalho",
-        "quantidade_vagas": 2,
-        "nivel_instrucao": "Técnico ou Superior Completo em Administração, Logística ou Área Correlata",
-        "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
-        "sexo": "Ambos",
-        "salario": "R$ 2.500,00"
-    },
-    {
-        "codigo": "8462321",
-        "ocupacao": "Arquiteta Designer de Interiores com CNH AB – possuir experiência e prática com Sketchup e Autocad e disponibilidade para trabalhar na escala 6×1.",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Superior ou Tecnólogo Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "F",
         "salario": "Piso da Categoria"
     },
     {
-        "codigo": "8440124",
-        "ocupacao": "Atendente de Lanchonete (PcD)",
+        "codigo": "8682176",
+        "ocupacao": "Ajudante de Cozinha – possuir disponibilidade de horário e para trabalhar aos finais de semana.",
         "quantidade_vagas": 1,
-        "nivel_instrucao": "Medio Completo ou Cursando",
-        "experiencia_meses": "Não exige",
-        "regiao": "Não especificada",
-        "sexo": "Ambos",
-        "salario": "R$ 1.600,00"
-    },
-    {
-        "codigo": "8480309",
-        "ocupacao": "Auxiliar Administrativo",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Médio Completo",
-        "experiencia_meses": "Não exige",
-        "regiao": "Não especificada",
-        "sexo": "M",
-        "salario": "R$ 1.658,00 Inicial (R$ 1.866,00 + bônus após 3 meses)"
-    },
-    {
-        "codigo": "8390450",
-        "ocupacao": "Auxiliar de Desenvolvimento Infantil com experiência comprovada em Carteira de Trabalho",
-        "quantidade_vagas": 2,
-        "nivel_instrucao": "Superior Completo ou Cursando em Pedagogia",
-        "experiencia_meses": "6 meses",
-        "regiao": "Massaguaçu",
-        "sexo": "F",
-        "salario": "R$ 1.612,00"
-    },
-    {
-        "codigo": "8205005",
-        "ocupacao": "Auxiliar de Limpeza (PcD) – possuir laudo médico.",
-        "quantidade_vagas": 10,
-        "nivel_instrucao": "Alfabetizado",
-        "experiencia_meses": "Não exige",
-        "regiao": "Não especificada",
-        "sexo": "Ambos",
-        "salario": "R$ 1.717,20"
-    },
-    {
-        "codigo": "8161324",
-        "ocupacao": "Auxiliar de Limpeza (PcD) com experiência comprovada em Carteira de Trabalho",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Médio Completo",
-        "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
-        "sexo": "F",
-        "salario": "R$ 1.717,20"
-    },
-    {
-        "codigo": "8480264",
-        "ocupacao": "Auxiliar de Manutenção (Limpeza) – possuir disponibilidade para trabalhar finais de semana e feriados. Irá realizar a limpeza do pátio, embarcações e auxiliará nas manobras dos barcos.",
-        "quantidade_vagas": 2,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "Não exige",
-        "regiao": "Tabatinga ao Centro",
-        "sexo": "Ambos",
-        "salario": "R$ 1.800,00"
-    },
-    {
-        "codigo": "8350602",
-        "ocupacao": "Camareira",
-        "quantidade_vagas": 2,
-        "nivel_instrucao": "Fundamental Completo",
-        "experiencia_meses": "6 meses",
-        "regiao": "Enseada de Ubatuba",
-        "sexo": "F",
-        "salario": "R$ 1.685,20 + Bônus"
-    },
-    {
-        "codigo": "8474780",
-        "ocupacao": "Chapeador com experiência comprovada em Carteira de Trabalho – possuir conhecimento em corte com maçarico, ponteamento com solda em peças de aço, montagens de tubos e flanges, instalação e remoção de raquetes, abertura e fechamento de flanges, instalação e remoção de válvulas de esmerilhamento em peças de aço.",
-        "quantidade_vagas": 7,
-        "nivel_instrucao": "Médio Completo",
-        "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
-        "sexo": "M",
-        "salario": "R$ 3.084,40 + Periculosidade"
+        "sexo": "Ambos",
+        "salario": "R$ 1.898,60"
     },
     {
-        "codigo": "8266915",
-        "ocupacao": "Consultor Ótico com experiência comprovada em Carteira de Trabalho – possuir experiência em ótica e disponibilidade para trabalhar aos sábados.",
+        "codigo": "8733239",
+        "ocupacao": "Ajudante de Cozinha (Bar e Restaurante)",
         "quantidade_vagas": 1,
-        "nivel_instrucao": "Médio Completo",
-        "experiencia_meses": "6 meses",
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 2.150,00 + 3% de comissão + Premiações e treinamentos em universidade corporativa"
+        "salario": "Piso da Categoria"
     },
     {
-        "codigo": "8161342",
-        "ocupacao": "Costureira",
+        "codigo": "8654304",
+        "ocupacao": "Ajudante de Cozinha em Quiosque",
         "quantidade_vagas": 3,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "F",
-        "salario": "R$ 1.800,00"
+        "salario": "R$ 1.898,00 + Comissão Variável"
     },
     {
-        "codigo": "8349332",
-        "ocupacao": "Cozinheira de Quiosque – possuir experiência anterior em quiosque e operação de fritadeira elétrica.",
+        "codigo": "8562764",
+        "ocupacao": "Ajudante de Marcenaria com CNH B – obrigatório possuir experiência no ramo.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "3 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.651,00"
+    },
+    {
+        "codigo": "8569251",
+        "ocupacao": "Ajudante de Motorista com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Massaguaçú ou Getuba",
+        "sexo": "M",
+        "salario": "R$ 1.934,00"
+    },
+    {
+        "codigo": "8524444",
+        "ocupacao": "Ajudante de Padeiro/ Padeiro – possuir disponibilidade de horário.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Sumaré, Olaria, Getuba, Massaguaçu ou Tabatinga",
+        "sexo": "Ambos",
+        "salario": "R$ 2.018,00"
+    },
+    {
+        "codigo": "8674750",
+        "ocupacao": "Ajudante de Pátio (Estoquista) com CNH B – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Porto Novo",
+        "sexo": "M",
+        "salario": "R$ 1.866,00"
+    },
+    {
+        "codigo": "8776204",
+        "ocupacao": "Ajudante Geral – separação de mercadorias, carga e descarga de veículos e controle e organização do estoque.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.518,00"
+    },
+    {
+        "codigo": "8789064",
+        "ocupacao": "Ajudante Geral (Loja de Móveis) com CNH B",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.978,00"
+    },
+    {
+        "codigo": "8779978",
+        "ocupacao": "Ajudante Geral (Materiais de Construção)",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "Não exige",
+        "regiao": "Martim de Sá",
+        "sexo": "M",
+        "salario": "Piso da Categoria"
+    },
+    {
+        "codigo": "8738085",
+        "ocupacao": "Ajudante Geral com CNH B – possuir noções de medida e disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Centro",
+        "sexo": "M",
+        "salario": "R$ 1.843,00"
+    },
+    {
+        "codigo": "8746083",
+        "ocupacao": "Armador – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Getuba e proximidades",
+        "sexo": "M",
+        "salario": "R$ 2.153,00"
+    },
+    {
+        "codigo": "8751873",
+        "ocupacao": "Assistente de RH – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
         "salario": "R$ 2.000,00"
     },
     {
-        "codigo": "8267488",
-        "ocupacao": "Cozinheiro – possuir disponibilidade de horário.",
+        "codigo": "8693755",
+        "ocupacao": "Atendente de Balcão com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "F",
+        "salario": "R$ 1.898,60"
+    },
+    {
+        "codigo": "8642460",
+        "ocupacao": "Atendente de Loja com experiência comprovada em Carteira de Trabalho e CNH B – possuir disponibilidade para trabalhar na escala 6×1, experiência em Vidraçaria ou Esquadrias será considerado diferencial.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.031,00 + Premiação"
+    },
+    {
+        "codigo": "8615637",
+        "ocupacao": "Atendente de Quiosque – possuir disponibilidade de horário.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Massaguaçu",
+        "sexo": "F",
+        "salario": "R$ 1.378,00 (6h/dia)"
+    },
+    {
+        "codigo": "8744920",
+        "ocupacao": "Atendente de Sorveteria – possuir disponibilidade de horário.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 1.945,34"
+    },
+    {
+        "codigo": "8750560",
+        "ocupacao": "Atendente de Sorveteria – possuir disponibilidade de horário.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.000,00"
+    },
+    {
+        "codigo": "8758033",
+        "ocupacao": "Atendente de Sorveteria (Temporária) – possuir disponibilidade para trabalhar das 14h às 20h.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Desejável Casa Branca",
+        "sexo": "F",
+        "salario": "R$ 1.500,00 (6h/dia)"
+    },
+    {
+        "codigo": "8784699",
+        "ocupacao": "Auxiliar Administrativo (Compras) com CNH B",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.306,08 + PLR"
+    },
+    {
+        "codigo": "8779949",
+        "ocupacao": "Auxiliar de Conservação de Edifício com experiência comprovada em Carteira de Trabalho – possuir disponibilidade de horário.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.060,00"
+    },
+    {
+        "codigo": "8775638",
+        "ocupacao": "Auxiliar de Cozinha",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 1.898,00"
+    },
+    {
+        "codigo": "8776485",
+        "ocupacao": "Auxiliar de Cozinha com experiência comprovada em Carteira de Trabalho",
         "quantidade_vagas": 2,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
-        "regiao": "Martin de Sá",
+        "regiao": "Trabalho em Massaguaçu",
+        "sexo": "Ambos",
+        "salario": "R$ 1.898,60"
+    },
+    {
+        "codigo": "8738563",
+        "ocupacao": "Auxiliar de Limpeza",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "Não exige",
+        "regiao": "Sumaré",
+        "sexo": "F",
+        "salario": "R$ 900,00 (Meio Período)"
+    },
+    {
+        "codigo": "8721305",
+        "ocupacao": "Auxiliar de Limpeza (Condomínio)",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "F",
+        "salario": "R$ 1.699,23"
+    },
+    {
+        "codigo": "8727033",
+        "ocupacao": "Auxiliar de Limpeza (Oficina Mecânica) com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.084,40"
+    },
+    {
+        "codigo": "8775645",
+        "ocupacao": "Auxiliar de Limpeza (Temporária) com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Incompleto",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "Piso da Categoria + Benefícios"
+    },
+    {
+        "codigo": "8776168",
+        "ocupacao": "Auxiliar de Mecânico Diesel com experiência comprovada em Carteira de Trabalho e CNH B – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.100,00"
+    },
+    {
+        "codigo": "8637913",
+        "ocupacao": "Auxiliar de Pedreiro",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.099,00"
+    },
+    {
+        "codigo": "8635241",
+        "ocupacao": "Auxiliar de Pintor de Automóveis com experiência comprovada em Carteira de Trabalho e CNH B",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.500,00"
+    },
+    {
+        "codigo": "8784708",
+        "ocupacao": "Auxiliar de Produção (Cozinha)",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.306,08 + PLR"
+    },
+    {
+        "codigo": "8737586",
+        "ocupacao": "Auxiliar de Serviços Gerais – possuir experiência na limpeza de condomínios e conhecimento em manutenção de piscinas e jardim.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.699,23"
+    },
+    {
+        "codigo": "8779629",
+        "ocupacao": "Auxiliar de Serviços Gerais com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 3,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1717,21 + 20%"
+    },
+    {
+        "codigo": "8660676",
+        "ocupacao": "Auxiliar de Serviços Gerais na Limpeza de Embarcações – possuir disponibilidade para trabalhar finais de semana e feriados.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Tabatinga ao Centro",
         "sexo": "M",
         "salario": "R$ 1.800,00"
     },
     {
-        "codigo": "8380153",
-        "ocupacao": "Cozinheiro (a) – possuir disponibilidade para trabalhar das 15h30 às 23h50.",
+        "codigo": "8733323",
+        "ocupacao": "Balconista (Bar e Restaurante)",
         "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "Piso da Categoria"
+    },
+    {
+        "codigo": "8785334",
+        "ocupacao": "Balconista (Depósito de Materiais para Construção) com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 2,
         "nivel_instrucao": "Médio Completo",
-        "experiencia_meses": "3 meses",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.031,00 + Bônus"
+    },
+    {
+        "codigo": "8703334",
+        "ocupacao": "Balconista Atendente – possuir disponibilidade para trabalhar 44 horas semanais.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 1.866,00"
+    },
+    {
+        "codigo": "8738486",
+        "ocupacao": "Balconista de Açougue",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.115,00"
+    },
+    {
+        "codigo": "8720843",
+        "ocupacao": "Balconista de Açougue com experiência comprovada em Carteira de Trabalho – possuir disponibilidade de horário.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Maranduba e proximidades",
+        "sexo": "Ambos",
+        "salario": "R$ 2.031,00"
+    },
+    {
+        "codigo": "8683181",
+        "ocupacao": "Balconista de Frios com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 4,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.018,00"
+    },
+    {
+        "codigo": "8733209",
+        "ocupacao": "Balconista de Lanchonete",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.100,00"
+    },
+    {
+        "codigo": "8682182",
+        "ocupacao": "Balconista de Lanchonete – possuir disponibilidade de horário e para trabalhar aos finais de semana.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
         "regiao": "Não especificada",
         "sexo": "Ambos",
         "salario": "R$ 1.898,60"
     },
     {
-        "codigo": "8412962",
-        "ocupacao": "Docente de Teoria para o Curso de Radiologia",
+        "codigo": "8648296",
+        "ocupacao": "Balconista de Padaria – possuir disponibilidade de horário.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Sumaré, Olaria, Getuba, Massaguaçu ou Tabatinga",
+        "sexo": "Ambos",
+        "salario": "R$ 2.018,00"
+    },
+    {
+        "codigo": "8683818",
+        "ocupacao": "Balconista de Quiosque",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "F",
+        "salario": "R$ 1.780,40"
+    },
+    {
+        "codigo": "8759100",
+        "ocupacao": "Borracheiro",
         "quantidade_vagas": 2,
-        "nivel_instrucao": "Técnico ou Tecnólogo Completo em Radiologia",
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.935,95"
+    },
+    {
+        "codigo": "8697762",
+        "ocupacao": "Camareira",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "F",
+        "salario": "R$ 2.100,00"
+    },
+    {
+        "codigo": "8654394",
+        "ocupacao": "Carpinteiro com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.513,91"
+    },
+    {
+        "codigo": "8594919",
+        "ocupacao": "Corretor de Imóveis com CNH B – possuir CRECI.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Massaguaçu e proximidades",
+        "sexo": "Ambos",
+        "salario": "Comissão"
+    },
+    {
+        "codigo": "8629488",
+        "ocupacao": "Cozinheira",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "F",
+        "salario": "R$ 1.650,00"
+    },
+    {
+        "codigo": "8674580",
+        "ocupacao": "Cozinheira",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Massaguaçu e Proximidades",
+        "sexo": "F",
+        "salario": "R$ 1.920,00"
+    },
+    {
+        "codigo": "8538351",
+        "ocupacao": "Cozinheira – possuir disponibilidade de horário.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Tabatinga",
+        "sexo": "F",
+        "salario": "Piso da Categoria"
+    },
+    {
+        "codigo": "8733140",
+        "ocupacao": "Cozinheira de Quiosque",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Centro e proximidades",
+        "sexo": "F",
+        "salario": "R$ 2.500,00"
+    },
+    {
+        "codigo": "8531268",
+        "ocupacao": "Cozinheiro – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Massaguaçú ou Martim de Sá",
+        "sexo": "Ambos",
+        "salario": "R$ 2.500,00 (Inicial)"
+    },
+    {
+        "codigo": "8779818",
+        "ocupacao": "Cozinheiro – possuir disponibilidade para trabalhar das 15h30 às 23h50.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "Não exige",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 24,80 Hora/Aula"
+        "salario": "R$ 2.035,00"
     },
     {
-        "codigo": "8471927",
-        "ocupacao": "Eletricista Predial com experiência comprovada em Carteira de Trabalho",
+        "codigo": "8765059",
+        "ocupacao": "Docente do Curso de Confeitaria",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Superior Completo na Área",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 38,00 Hora/Aula"
+    },
+    {
+        "codigo": "8629152",
+        "ocupacao": "Eletricista de Autos com experiência comprovada em Carteira de Trabalho",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
@@ -220,44 +600,184 @@
         "salario": "R$ 2.600,00"
     },
     {
-        "codigo": "8256804",
-        "ocupacao": "Empregada Doméstica – possuir disponibilidade para trabalhar na escala 6×1.",
+        "codigo": "8526167",
+        "ocupacao": "Eletricista de Manutenção com CNH B – irá trabalhar com manutenção de motobombas em ETEs e ETAs.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio e Técnico Completos em Elétrica Industrial ou Eletrotécnica",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.000,00 (Inicial) + 30% de Perículosidade."
+    },
+    {
+        "codigo": "8669076",
+        "ocupacao": "Empacotador – possuir disponibilidade de horário.",
+        "quantidade_vagas": 10,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Sumaré, Olaria, Getuba, Massaguaçu ou Tabatinga",
+        "sexo": "Ambos",
+        "salario": "R$ 2.018,00"
+    },
+    {
+        "codigo": "8758167",
+        "ocupacao": "Empregada Doméstica Diarista",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "F",
-        "salario": "R$ 1.756,00"
+        "salario": "R$ 200,00/dia"
     },
     {
-        "codigo": "8474700",
-        "ocupacao": "Encarregado de Obras com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar em Ubatuba.",
+        "codigo": "8709037",
+        "ocupacao": "Empregada Doméstica nos Serviços Gerais – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "F",
+        "salario": "R$ 1.906,00"
+    },
+    {
+        "codigo": "8770730",
+        "ocupacao": "Empregada Doméstica nos Serviços Gerais – possuir disponibilidade para trabalhar na escala 6×1.",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
-        "regiao": "Trabalho em Ubatuba",
-        "sexo": "M",
+        "regiao": "Não especificada",
+        "sexo": "F",
+        "salario": "R$ 1.804,00"
+    },
+    {
+        "codigo": "8770726",
+        "ocupacao": "Empregada Doméstica nos Serviços Gerais com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "F",
         "salario": "Piso da Categoria"
     },
     {
+        "codigo": "8710718",
+        "ocupacao": "Enfermeiro do Trabalho (Docente)",
+        "quantidade_vagas": 8,
+        "nivel_instrucao": "Superior Completo em Enfermagem com Especialização",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 18,00 Hora/Aula"
+    },
+    {
         "codigo": "8479938",
-        "ocupacao": "Entregador com CNH A/B – possuir disponibilidade para trabalhar no turno das 13h às 22h. Irá eventualmente auxiliar no balcão e atividades da loja.",
+        "ocupacao": "Entregador (Bebidas, Água e Gás) com CNH A – possuir disponibilidade para trabalhar no turno das 08h às 17h. Irá eventualmente auxiliar no balcão e atividades da loja.",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "Não exige",
         "regiao": "Massaguaçu",
         "sexo": "M",
-        "salario": "R$ 1.900,00"
+        "salario": "R$ 2.400,00"
     },
     {
-        "codigo": "8475640",
-        "ocupacao": "Faxineiro com experiência comprovada em Carteira de Trabalho",
+        "codigo": "8694060",
+        "ocupacao": "Entregador Motorizado com CNH B – possuir disponibilidade para trabalhar na escala 6×1.",
         "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Porto Novo",
+        "sexo": "M",
+        "salario": "R$ 1.866,00"
+    },
+    {
+        "codigo": "8619116",
+        "ocupacao": "Estagiário Administrativo",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Cursando Administração ou Cursos Correlatos",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 1.200,00 (6h/dia)"
+    },
+    {
+        "codigo": "8765074",
+        "ocupacao": "Estagiário de Arquitetura",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Cursando Arquitetura (a partir do 5º semestre)",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 1.600,00"
+    },
+    {
+        "codigo": "8619131",
+        "ocupacao": "Estagiário de Engenharia Civil – possuir disponibilidade para atuar em obras no Massaguaçu e Aruan.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Cursando entre o 3º e 4º ano de Engenharia Civil",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 1.200,00 (6h/dia)"
+    },
+    {
+        "codigo": "8745002",
+        "ocupacao": "Estagiário de Publicidade/Marketing",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Cursando Superior em Publicidade ou Marketing",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 1.500,00 (6h/dia)"
+    },
+    {
+        "codigo": "8737531",
+        "ocupacao": "Estoquista – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "Piso da Categoria"
+    },
+    {
+        "codigo": "8765316",
+        "ocupacao": "Faxineiro com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 5,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 1.655,00"
+        "salario": "Piso da Categoria"
+    },
+    {
+        "codigo": "8720802",
+        "ocupacao": "Faxineiro com experiência comprovada em Carteira de Trabalho – possuir disponibilidade de horário.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Incompleto",
+        "experiencia_meses": "6 meses",
+        "regiao": "Maranduba e proximidades",
+        "sexo": "Ambos",
+        "salario": "R$ 1.844,00"
+    },
+    {
+        "codigo": "8683250",
+        "ocupacao": "FLV – Operador de Supermercado – Balcão com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 4,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.018,00"
+    },
+    {
+        "codigo": "8674547",
+        "ocupacao": "Garçom",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Massaguaçu e Proximidades",
+        "sexo": "M",
+        "salario": "R$ 1.800,00"
     },
     {
         "codigo": "8481259",
@@ -267,161 +787,381 @@
         "experiencia_meses": "6 meses",
         "regiao": "Tabatinga",
         "sexo": "M",
-        "salario": "Piso da Categora"
+        "salario": "Piso da Categoria"
     },
     {
-        "codigo": "8287133",
-        "ocupacao": "Garçom – possuir disponibilidade para trabalhar em Ubatuba (Maranduba).",
-        "quantidade_vagas": 2,
+        "codigo": "8779809",
+        "ocupacao": "Garçom – possuir disponibilidade para trabalhar das 15h30 às 23h50.",
+        "quantidade_vagas": 1,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "Não exige",
-        "regiao": "Trabalho em Ubatuba",
-        "sexo": "Ambos",
-        "salario": "R$ 1.890,00"
-    },
-    {
-        "codigo": "8395762",
-        "ocupacao": "Instalador (Portas e Similares) com experiência comprovada em Carteira de Trabalho e CNH A",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Não exige",
-        "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
+        "salario": "R$ 2.035,00"
+    },
+    {
+        "codigo": "8608269",
+        "ocupacao": "Garçom com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.850,00 + Variáveis"
+    },
+    {
+        "codigo": "8733189",
+        "ocupacao": "Garçom de Quiosque",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Centro e proximidades",
+        "sexo": "M",
         "salario": "R$ 2.500,00"
     },
     {
-        "codigo": "8452268",
-        "ocupacao": "Instalador de Águas, Esgotos e Gás (Moto) com CNH A – possuir veículo próprio.\nFicará responsável pela execução de corte e restabelecimento no fornecimento de água aos imóveis atendidos pela companhia, dentre outras atividades inerentes ao cargo.",
-        "quantidade_vagas": 13,
+        "codigo": "8648436",
+        "ocupacao": "Gerente Comercial na Área Imobiliária com experiência comprovada em Carteira de Trabalho e CNH B – possuir conhecimento em computação, Excell avançado e disponibilidade de horário.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Superior completo em Administração ou Técnico em Transações Imobiliárias",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 4.000,00 + Comissão por Venda"
+    },
+    {
+        "codigo": "8648376",
+        "ocupacao": "Gerente Trainee com experiência comprovada em Carteira de Trabalho – possuir disponibilidade de horário.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo, desejável Superior em Administração ou Gestão",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 3.000,00 Inicial"
+    },
+    {
+        "codigo": "8774245",
+        "ocupacao": "Guarda-Vidas Temporário – possuir certificado de guarda-vidas e disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 3,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "Não exige",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 2.230,17"
+        "salario": "R$ 2.094,44"
     },
     {
-        "codigo": "8244763",
-        "ocupacao": "Instalador de Ar Condicionado com experiência comprovada em Carteira de Trabalho e CNH A/B",
+        "codigo": "8531236",
+        "ocupacao": "Marceneiro ou Ajudante de Marcenaria – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.000,00 (Inicial)"
+    },
+    {
+        "codigo": "8784776",
+        "ocupacao": "Mecânico com experiência comprovada em Carteira de Trabalho",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 1.518,00"
+        "salario": "Salário Mínimo + Comissão"
     },
     {
-        "codigo": "8412960",
-        "ocupacao": "Instrutor de Inglês – imprescindível possuir conhecimento e fluência em inglês de nível avançado e disponibilidade de horário. Experiência na função é um diferencial.",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Médio Completo",
-        "experiencia_meses": "Não exige",
-        "regiao": "Não especificada",
-        "sexo": "Ambos",
-        "salario": "R$ 1.852,00"
-    },
-    {
-        "codigo": "8480657",
-        "ocupacao": "Jardineiro – possuir experiência em operar roçadeira.",
+        "codigo": "8726994",
+        "ocupacao": "Mecânico de Máquinas Pesadas (Diesel) com experiência comprovada em Carteira de Trabalho e CNH B – possuir disponibilidade para trabalhar na escala 6×1.",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 3.000,00"
+    },
+    {
+        "codigo": "8776175",
+        "ocupacao": "Mecânico Diesel com experiência comprovada em Carteira de Trabalho e CNH B – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 3.500,00"
+    },
+    {
+        "codigo": "8562819",
+        "ocupacao": "Meio Oficial de Marcenaria com CNH B – obrigatório possuir experiência no ramo.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.866,00"
+    },
+    {
+        "codigo": "8743866",
+        "ocupacao": "Montador de Andaime com experiência em Carteira de Trabalho",
+        "quantidade_vagas": 3,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.800,00"
+    },
+    {
+        "codigo": "8648265",
+        "ocupacao": "Montador de Móveis com CNH B",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "M",
         "salario": "R$ 2.000,00"
     },
     {
-        "codigo": "8440653",
-        "ocupacao": "Marceneiro com experiência comprovada em Carteira de Trabalho e CNH AB",
-        "quantidade_vagas": 2,
+        "codigo": "8745327",
+        "ocupacao": "Motorista de Caminhão com experiência comprovada em Carteira de Trabalho e CNH C",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "Piso da Categoria"
+    },
+    {
+        "codigo": "8785709",
+        "ocupacao": "Motorista Entregador com CNH C",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.276,58"
+    },
+    {
+        "codigo": "8774572",
+        "ocupacao": "Motorista Entregador de Gelo com experiência comprovada em Carteira de Trabalho e CNH C/D",
+        "quantidade_vagas": 3,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.860,00"
+    },
+    {
+        "codigo": "8703394",
+        "ocupacao": "Oficial de Manutenção Predial",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.969,40"
+    },
+    {
+        "codigo": "8668898",
+        "ocupacao": "Operador de Caixa – possuir disponibilidade de horário.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Sumaré, Olaria, Getuba, Massaguaçu ou Tabatinga",
+        "sexo": "Ambos",
+        "salario": "R$ 1.898,60"
+    },
+    {
+        "codigo": "8536713",
+        "ocupacao": "Operador de Caixa com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 1,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "M",
-        "salario": "R$ 3.000,00"
+        "salario": "Piso da Categoria"
     },
     {
-        "codigo": "8350768",
-        "ocupacao": "Marmorista com experiência comprovada em Carteira de Trabalho",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Não exige",
+        "codigo": "8720859",
+        "ocupacao": "Operador de Caixa com experiência comprovada em Carteira de Trabalho – possuir disponibilidade de horário.",
+        "quantidade_vagas": 3,
+        "nivel_instrucao": "Médio Incompleto",
         "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
-        "sexo": "M",
-        "salario": "R$ 2.161,34"
+        "regiao": "Maranduba e proximidades",
+        "sexo": "Ambos",
+        "salario": "R$ 2.183,00 + R$ 117,00 Quebra"
     },
     {
-        "codigo": "8134216",
-        "ocupacao": "Mecânico de Automóveis com experiência comprovada em Carteira de Trabalho e CNH B",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Não exige",
-        "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
-        "sexo": "M",
-        "salario": "R$ 2.031,00"
-    },
-    {
-        "codigo": "8452126",
-        "ocupacao": "Mecânico Eletricista Náutico",
-        "quantidade_vagas": 2,
-        "nivel_instrucao": "Não exige",
+        "codigo": "8683198",
+        "ocupacao": "Operador de Caixa com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 5,
+        "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 3.000,00"
+        "salario": "R$ 2.165,00"
     },
     {
-        "codigo": "8357280",
-        "ocupacao": "Mestre de Obras com experiência comprovada em Carteira de Trabalho",
+        "codigo": "8758249",
+        "ocupacao": "Operador de Loja – possuir disponibilidade para trabalhar das 08h às 17h, no Massaguaçu. Experiência na função será considerado um diferencial.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Desejável Massaguaçu",
+        "sexo": "M",
+        "salario": "R$ 1.843,00"
+    },
+    {
+        "codigo": "8703330",
+        "ocupacao": "Operador de Loja (FLV) – possuir disponibilidade de horário.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Incompleto",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.032,00"
+    },
+    {
+        "codigo": "8536764",
+        "ocupacao": "Operador de Loja e Mercado com experiência comprovada em Carteira de Trabalho",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "M",
-        "salario": "Piso Salarial"
+        "salario": "Piso da Categoria"
     },
     {
-        "codigo": "8395804",
-        "ocupacao": "Montador (Móveis e Artefatos) com experiência comprovada em Carteira de Trabalho e CNH A",
+        "codigo": "8674913",
+        "ocupacao": "Operador de Vendas",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.804,00"
+    },
+    {
+        "codigo": "8693720",
+        "ocupacao": "Operadora de Caixa com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "F",
+        "salario": "R$ 1.898,60"
+    },
+    {
+        "codigo": "8758249",
+        "ocupacao": "Operadora de Loja – possuir disponibilidade para trabalhar das 13h às 22h, no Massaguaçu. Experiência na função será considerado um diferencial.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Desejável Massaguaçu",
+        "sexo": "F",
+        "salario": "R$ 1.843,00"
+    },
+    {
+        "codigo": "8589501",
+        "ocupacao": "Ornamentador de Lagos – possuir moto ou carro próprio, disponibilidade para realizar viagens, conhecimento em elétrica e hidráulica, aptidão física e conhecimento em aquarismo, laguismo e peixes ornamentais.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.200,00 + Comissão sobre vendas e projetos"
+    },
+    {
+        "codigo": "8683269",
+        "ocupacao": "Padaria – Operador de Supermercado – Produção com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.165,00"
+    },
+    {
+        "codigo": "8536735",
+        "ocupacao": "Padeiro com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "Piso da Categoria"
+    },
+    {
+        "codigo": "8693724",
+        "ocupacao": "Padeiro com experiência comprovada em Carteira de Trabalho",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
+        "salario": "R$ 3.000,00 (inicial)"
+    },
+    {
+        "codigo": "8674621",
+        "ocupacao": "Padeiro Confeiteiro com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Massaguaçu e Proximidades",
+        "sexo": "M",
         "salario": "R$ 2.500,00"
     },
     {
-        "codigo": "8334783",
-        "ocupacao": "Motorista de Caminhão (Madeireira) com CNH D. Irá trabalhar em São Sebastião.",
-        "quantidade_vagas": 2,
+        "codigo": "8637906",
+        "ocupacao": "Pedreiro",
+        "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.513,00"
+    },
+    {
+        "codigo": "8687022",
+        "ocupacao": "Pedreiro",
+        "quantidade_vagas": 15,
+        "nivel_instrucao": "—-",
         "experiencia_meses": "Não exige",
         "regiao": "Não especificada",
         "sexo": "M",
-        "salario": "R$ 2.673,63"
+        "salario": "R$ 2.500,00"
     },
     {
-        "codigo": "8475639",
-        "ocupacao": "Operador de Empilhadeira em Almoxarifado com experiência comprovada em Carteira de Trabalho e CNH B – possuir NR 11, NR 12 e Curso de formação para operadores de empilhadeira em dia.",
-        "quantidade_vagas": 2,
-        "nivel_instrucao": "Médio Completo",
+        "codigo": "8720914",
+        "ocupacao": "Pedreiro – irá realizar reparos domésticos.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 2.700,00"
+        "salario": "R$ 180,00/dia"
     },
     {
-        "codigo": "8480120",
-        "ocupacao": "Operador de Loja",
-        "quantidade_vagas": 1,
+        "codigo": "8765128",
+        "ocupacao": "Pedreiro com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 2,
         "nivel_instrucao": "Não exige",
-        "experiencia_meses": "Não exige",
-        "regiao": "Massaguaçu",
-        "sexo": "F",
-        "salario": "R$ 1.900,00"
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.664,75"
+    },
+    {
+        "codigo": "8531219",
+        "ocupacao": "Pintor – desejável experiência com balancinho.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Massaguaçú e proximidades",
+        "sexo": "M",
+        "salario": "R$ 2.000,00 (Inicial)"
     },
     {
         "codigo": "8318030",
-        "ocupacao": "Pintor Automotivo com experiência em CPTS e CNH B",
+        "ocupacao": "Pintor Automotivo com experiência comprovada em Carteira de Trabalho e CNH B",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
@@ -430,94 +1170,184 @@
         "salario": "R$ 3.800,00"
     },
     {
-        "codigo": "8462022",
-        "ocupacao": "Pizzaiolo com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar das 15h30 às 23h30.",
+        "codigo": "8674603",
+        "ocupacao": "Pizzaiolo",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
-        "regiao": "Sumaré",
+        "regiao": "Massaguaçu e Proximidades",
         "sexo": "M",
-        "salario": "R$ 1.898,00"
+        "salario": "R$ 2.500,00"
     },
     {
-        "codigo": "8412962",
-        "ocupacao": "Preceptor de Estágio para o Curso de Radiologia",
-        "quantidade_vagas": 2,
-        "nivel_instrucao": "Técnico ou Tecnólogo Completo em Radiologia",
-        "experiencia_meses": "Não exige",
-        "regiao": "Não especificada",
-        "sexo": "Ambos",
-        "salario": "R$ 10,00 Hora/Aula"
-    },
-    {
-        "codigo": "8434590",
-        "ocupacao": "Recepcionista de Pousada com disponibilidade para trabalhar em Ubatuba (Maranduba).",
-        "quantidade_vagas": 2,
-        "nivel_instrucao": "Médio Completo",
-        "experiencia_meses": "Não exige",
-        "regiao": "Trabalho em Ubatuba",
-        "sexo": "Ambos",
-        "salario": "R$ 1.890,00"
-    },
-    {
-        "codigo": "8445545",
-        "ocupacao": "Representante de Desenvolvimento de Vendas com experiência comprovada em Carteira de Trabalho",
+        "codigo": "8603004",
+        "ocupacao": "Pizzaiolo – possuir disponibilidade para trabalhar das 15h às 23h.",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 1.600,00"
+        "salario": "R$ 1.700,00"
     },
     {
-        "codigo": "8345103",
-        "ocupacao": "Salgadeira",
+        "codigo": "8492315",
+        "ocupacao": "Pizzaiolo (Forno a Lenha) com experiência comprovada em Carteira de Trabalho",
         "quantidade_vagas": 1,
-        "nivel_instrucao": "Fundamental\nCompleto",
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "3 meses",
+        "regiao": "Martim de Sá",
+        "sexo": "M",
+        "salario": "R$ 1.800,00"
+    },
+    {
+        "codigo": "8733465",
+        "ocupacao": "Polidor de Automóveis com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
-        "sexo": "F",
-        "salario": "R$ 2.100,00"
+        "sexo": "Ambos",
+        "salario": "R$ 1.900,00 + Comissão"
     },
     {
-        "codigo": "8372007",
+        "codigo": "8752167",
+        "ocupacao": "Porteiro com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.063,15 + R$ 509,33 de Cesta Básica"
+    },
+    {
+        "codigo": "8635485",
+        "ocupacao": "Preceptor de Estágio para o Curso de Enfermagem",
+        "quantidade_vagas": 8,
+        "nivel_instrucao": "Superior Completo em Enfermagem",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 12,00 Hora/Aula"
+    },
+    {
+        "codigo": "8773029",
+        "ocupacao": "Promotor de Vendas com CNH A",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 1.800,00 + Bônus por Meta e Comissão"
+    },
+    {
+        "codigo": "8784854",
+        "ocupacao": "Recepcionista – possuir disponibilidade para trabalhar aos sábados.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.031,00"
+    },
+    {
+        "codigo": "8775729",
+        "ocupacao": "Recepcionista (Colônia de Férias) com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.900,00"
+    },
+    {
+        "codigo": "8774363",
+        "ocupacao": "Recepcionista com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "Piso da Categoria"
+    },
+    {
+        "codigo": "8669032",
+        "ocupacao": "Repositor – possuir disponibilidade de horário.",
+        "quantidade_vagas": 5,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "6 meses",
+        "regiao": "Sumaré, Olaria, Getuba, Massaguaçu ou Tabatinga",
+        "sexo": "Ambos",
+        "salario": "R$ 2.018,00"
+    },
+    {
+        "codigo": "8720851",
+        "ocupacao": "Repositor com experiência comprovada em Carteira de Trabalho – possuir disponibilidade de horário.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Incompleto",
+        "experiencia_meses": "6 meses",
+        "regiao": "Maranduba e proximidades",
+        "sexo": "Ambos",
+        "salario": "R$ 2.031,00"
+    },
+    {
+        "codigo": "8683326",
+        "ocupacao": "Repositor de Loja com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 5,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 2.018,00"
+    },
+    {
+        "codigo": "8605668",
+        "ocupacao": "Repositor de Mercadorias (PcD) – possuir laudo médico.",
+        "quantidade_vagas": 3,
+        "nivel_instrucao": "Fundamental Completo",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.018,00"
+    },
+    {
+        "codigo": "8493243",
         "ocupacao": "Serralheiro com experiência comprovada em Carteira de Trabalho",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
-        "regiao": "Perequê Mirim",
+        "regiao": "Não especificada",
         "sexo": "M",
-        "salario": "R$ 2.300,00"
+        "salario": "Piso da Categoria"
     },
     {
-        "codigo": "8395809",
-        "ocupacao": "Serralheiro de Alumínio (Esquadrias) com experiência comprovada em Carteira de Trabalho e CNH A",
+        "codigo": "8727032",
+        "ocupacao": "Serralheiro com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
-        "sexo": "Ambos",
+        "sexo": "M",
         "salario": "R$ 2.500,00"
     },
     {
-        "codigo": "8472604",
-        "ocupacao": "Supervisor Comercial com CNH B – possuir disponibilidade para trabalhar na escala 6×1.",
-        "quantidade_vagas": 2,
-        "nivel_instrucao": "Médio Completo",
+        "codigo": "8737744",
+        "ocupacao": "Serralheiro ou Vidraceiro com experiência comprovada em Carteira de Trabalho e CNH B – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 10,
+        "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
-        "sexo": "Ambos",
-        "salario": "R$ 2.100,00 + Ajuda de custo + Comissão para equipe"
+        "regiao": "Centro",
+        "sexo": "M",
+        "salario": "R$ 3.000,00"
     },
     {
-        "codigo": "8109492",
-        "ocupacao": "Supervisor de Vendas com experiência comprovada em Carteira de Trabalho e CNH B – possuir experiência no ramo de telecomunicações e veículo próprio.",
-        "quantidade_vagas": 3,
-        "nivel_instrucao": "Médio Completo",
+        "codigo": "8765119",
+        "ocupacao": "Servente de Obras com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 4,
+        "nivel_instrucao": "Não exige",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 2.300,00 + Bônus sobre vendas da equipe + Bônus de vendas pessoais + Premiações por metas"
+        "salario": "R$ 2.189,75"
     },
     {
         "codigo": "8345313",
@@ -530,149 +1360,169 @@
         "salario": "Salário Mínimo + Bônus de vendas pessoais + Premiações por metas"
     },
     {
-        "codigo": "8480215",
-        "ocupacao": "Técnico em Fibra Óptica com CNH AB – irá trabalhar na rua com escada, visita aos assinantes e configuração de roteadores.",
+        "codigo": "8619249",
+        "ocupacao": "Técnico de Edificações com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para atuar em obras no Massaguaçu e Aruan.",
         "quantidade_vagas": 1,
-        "nivel_instrucao": "Não exige",
+        "nivel_instrucao": "Curso Técnico em Edificações Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.664,75"
+    },
+    {
+        "codigo": "8675507",
+        "ocupacao": "Técnico de Enfermagem – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 4,
+        "nivel_instrucao": "Técnico Completo em Enfermagem",
         "experiencia_meses": "Não exige",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 1.804,00 + 30% Periculosidade"
+        "salario": "R$ 2.434,92"
     },
     {
-        "codigo": "8384564",
-        "ocupacao": "Topógrafo com experiência comprovada em Carteira de Trabalho e CNH B.",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Médio Completo",
+        "codigo": "8648384",
+        "ocupacao": "Técnico de Manutenção com experiência comprovada em Carteira de Trabalho – possuir NR10 e NR35",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo e Técnico em Refrigeração ou Elétrica",
         "experiencia_meses": "6 meses",
-        "regiao": "——",
-        "sexo": "M",
-        "salario": "R$ 4.000,00"
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 3.328,00"
     },
     {
-        "codigo": "8471572",
-        "ocupacao": "Vendedor",
+        "codigo": "8619269",
+        "ocupacao": "Técnico de Segurança do Trabalho com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para atuar em obras no Massaguaçu e Aruan.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Curso Técnico em Segurança do Trabalho Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.664,75"
+    },
+    {
+        "codigo": "8654734",
+        "ocupacao": "Vendedor com experiência comprovada em Carteira de Trabalho",
         "quantidade_vagas": 2,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 1.525,00 + Comissão"
+        "salario": "R$ 2.010,00 + Comissão"
     },
     {
-        "codigo": "8445534",
-        "ocupacao": "Vendedor de Consórcio com experiência comprovada em Carteira de Trabalho",
+        "codigo": "8654797",
+        "ocupacao": "Vendedor com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 2.010,00 + Comissão"
+    },
+    {
+        "codigo": "8765033",
+        "ocupacao": "Vendedor com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 1,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Enseada ao Travessão",
+        "sexo": "Ambos",
+        "salario": "R$ 2.189,49 + Comissão e premiação"
+    },
+    {
+        "codigo": "8643326",
+        "ocupacao": "Vendedor de Móveis com CNH B",
         "quantidade_vagas": 1,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "R$ 1.800,00"
+        "salario": "R$ 1.880,00"
     },
     {
-        "codigo": "8474727",
-        "ocupacao": "Vendedor Interno com experiência comprovada em Carteira de Trabalho",
+        "codigo": "8726544",
+        "ocupacao": "Vendedor em Comércio Atacadista (Loja de Tintas) com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
         "quantidade_vagas": 1,
-        "nivel_instrucao": "Não exige",
+        "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "Piso da Categoria + Comissão"
+        "salario": "R$ 2.010,28 + Premiação sobre vendas"
     },
     {
-        "codigo": "8465130",
-        "ocupacao": "Vendedor Interno com experiência comprovada em Carteira de Trabalho – necessário possuir disponibilidade para trabalhar das 08h15 às 18h30.",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Fundamental Completo",
-        "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
-        "sexo": "F",
-        "salario": "R$ 3.000,00"
-    },
-    {
-        "codigo": "8465132",
-        "ocupacao": "Vendedor Interno com experiência comprovada em Carteira de Trabalho – necessário possuir disponibilidade para trabalhar das 15h30 às 22h.",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Fundamental Completo",
-        "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
-        "sexo": "F",
-        "salario": "R$ 3.000,00"
-    },
-    {
-        "codigo": "8109553",
-        "ocupacao": "Vendedor Porta a Porta (Planos de Internet e Telefone) com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar aos sábados.",
+        "codigo": "8615725",
+        "ocupacao": "Vendedor Externo Porta a Porta com experiência no porta a porta/vendas comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar aos sábados.",
         "quantidade_vagas": 10,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "Ambos",
-        "salario": "Salário Mínimo + Bônus de vendas pessoais + Premiações por metas"
+        "salario": "R$ 1.518,00 + Bônus e premiações + Outros benefícios"
     },
     {
-        "codigo": "8458968",
-        "ocupacao": "Vendedora com experiência comprovada em Carteira de Trabalho",
+        "codigo": "8703353",
+        "ocupacao": "Vendedor Interno – possuir disponibilidade para trabalhar no turno das 16h às 01h.",
         "quantidade_vagas": 1,
+        "nivel_instrucao": "Não exige",
+        "experiencia_meses": "Não exige",
+        "regiao": "Não especificada",
+        "sexo": "M",
+        "salario": "R$ 1.755,00"
+    },
+    {
+        "codigo": "8765340",
+        "ocupacao": "Vendedor Interno com experiência comprovada em Carteira de Trabalho",
+        "quantidade_vagas": 5,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "Piso da Categoria"
+    },
+    {
+        "codigo": "8528347",
+        "ocupacao": "Vendedor Porta a Porta com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Não especificada",
+        "sexo": "Ambos",
+        "salario": "R$ 1.650,00 + Comissão"
+    },
+    {
+        "codigo": "8737469",
+        "ocupacao": "Vendedora com experiência comprovada em Carteira de Trabalho – irá trabalhar em loja de pescados.",
+        "quantidade_vagas": 2,
+        "nivel_instrucao": "Médio Completo",
+        "experiencia_meses": "6 meses",
+        "regiao": "Desejável Massaguaçu e proximidades",
         "sexo": "F",
         "salario": "R$ 2.030,70"
     },
     {
-        "codigo": "8372519",
-        "ocupacao": "Vendedora com experiência comprovada em Carteira de Trabalho – possuir experiência com vendas no atacado/varejo e disponibilidade para trabalhar aos sábados.",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Não exige",
-        "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
-        "sexo": "F",
-        "salario": "R$ 2.031,00"
-    },
-    {
-        "codigo": "8439792",
-        "ocupacao": "Vendedora de Materiais de Construção – desejável experiência em materiais de construção.",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Não exige",
-        "experiencia_meses": "Não exige",
-        "regiao": "Desejável região Central",
-        "sexo": "F",
-        "salario": "R$ 2.031,00"
-    },
-    {
-        "codigo": "8440051",
-        "ocupacao": "Vendedora de Materiais de Construção com experiência comprovada em Carteira de Trabalho",
-        "quantidade_vagas": 1,
-        "nivel_instrucao": "Não exige",
-        "experiencia_meses": "6 meses",
-        "regiao": "Não especificada",
-        "sexo": "F",
-        "salario": "R$ 2.031,00"
-    },
-    {
-        "codigo": "8267002",
-        "ocupacao": "Vendedora Interna e Externa com experiência comprovada em Carteira de Trabalho – possuir experiência em ótica e disponibilidade para trabalhar na escala 6×1.",
-        "quantidade_vagas": 1,
+        "codigo": "8588835",
+        "ocupacao": "Vendedora com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
+        "quantidade_vagas": 3,
         "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "F",
-        "salario": "R$ 1.839,00 inicial + comissão até 1% + Premiações e treinamentos certificados em universidade corporativa"
+        "salario": "Piso da Categoria"
     },
     {
-        "codigo": "8163526",
-        "ocupacao": "Vidraceiro com experiência comprovada em Carteira de Trabalho e CNH B",
+        "codigo": "8738967",
+        "ocupacao": "Zelador (Auxiliar de Conservação Predial) com experiência comprovada em Carteira de Trabalho – possuir disponibilidade para trabalhar na escala 6×1.",
         "quantidade_vagas": 1,
-        "nivel_instrucao": "Não exige",
+        "nivel_instrucao": "Médio Completo",
         "experiencia_meses": "6 meses",
         "regiao": "Não especificada",
         "sexo": "M",
-        "salario": "R$ 2.800,00"
+        "salario": "R$ 2.063,15"
     },
     {
         "codigo": "",
         "ocupacao": "TOTAL DE VAGAS DISPONÍVEIS",
-        "quantidade_vagas": 123,
+        "quantidade_vagas": 288,
         "nivel_instrucao": null,
         "experiencia_meses": "Não exige",
         "regiao": null,
