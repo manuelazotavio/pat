@@ -184,6 +184,8 @@ function filtrarPorNome(vagas, termo) {
 client.on("message", async (msg) => {
   try {
 
+    if (msg.from === "status@broadcast") return;
+    
     console.log(
       `📩 [RECEBIDO] De: ${msg.from} | Tipo: ${
         msg.type
