@@ -8,55 +8,54 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-const ARQUIVO_ALERTAS = "./alertas.json";
-let listaAlertas = [];
+const ARQUIVO_VAGAS = "./vagas_caragua.json";
 
-try {
-  if (fs.existsSync(ARQUIVO_ALERTAS)) {
-    listaAlertas = JSON.parse(fs.readFileSync(ARQUIVO_ALERTAS));
-  }
-} catch (e) {
-  console.error(e);
-}
-
-function carregarVagasAtualizadas() {
+function carregarVagas() {
   try {
-    const data = fs.readFileSync("./vagas_caragua.json", "utf8");
-    return JSON.parse(data);
+    if (fs.existsSync(ARQUIVO_VAGAS)) {
+      return JSON.parse(fs.readFileSync(ARQUIVO_VAGAS, "utf8"));
+    }
+    return [];
   } catch (err) {
-    console.error(err);
+    console.error("Erro ao ler arquivo de vagas:", err);
     return [];
   }
 }
 
-async function processarComIA(mensagemUsuario, vagasDisponiveis) {
+function rodarScraper() {
+  console.log("Iniciando scraper...");
+  exec("python3 /home/ubuntu/pat/pat_v2.py", (error, stdout, stderr) => {
+    if (error) return console.error(`Erro: ${error.message}`);
+    console.log(`Scraper rodou: ${stdout}`);
+  });
+}
+
+async function processarComIA(mensagemUsuario) {
+  const vagas = carregarVagas();
+  
   const prompt = `
-    Você é um assistente simpático do PAT (Posto de Atendimento ao Trabalhador).
-    Sua tarefa é ajudar o usuário a encontrar vagas de emprego em uma lista.
+    Você é o Assistente Virtual do PAT de Caraguatatuba.
+    Sua missão é ajudar o usuário a encontrar vagas de emprego.
 
-    LISTA DE VAGAS ATUAIS (JSON):
-    ${JSON.stringify(vagasDisponiveis)}
+    VAGAS DISPONÍVEIS AGORA:
+    ${JSON.stringify(vagas)}
 
-    MENSAGEM DO USUÁRIO:
-    "${mensagemUsuario}"
+    REGRAS DE RESPOSTA:
+    1. Seja humano, empático e use emojis.
+    2. Se o usuário procurar uma vaga, liste apenas as que combinam.
+    3. Se não houver a vaga exata, sugira algo parecido ou peça para ele tentar outro termo.
+    4. Informe sempre o código da vaga e o endereço do PAT (R. Taubaté, 520 - Sumaré).
+    5. Se o usuário apenas cumprimentar, explique que você pode buscar vagas pelo nome ou filtrar por requisitos.
 
-    INSTRUÇÕES:
-    1. Analise a intenção do usuário.
-    2. Se ele estiver procurando uma vaga específica, filtre a lista acima e formate uma resposta amigável.
-    3. Se não houver vagas que combinem, explique de forma educada e sugira que ele tente outros termos.
-    4. Se ele apenas der "Oi", apresente-se como o assistente virtual e pergunte como pode ajudar.
-    5. Seja conciso e use emojis.
-    6. Informe sempre o código da vaga para que ele possa anotar.
-    7. O endereço do PAT é R. Taubaté, 520 - Sumaré, Caraguatatuba.
+    USUÁRIO DISSE: "${mensagemUsuario}"
   `;
 
   try {
     const result = await model.generateContent(prompt);
-    const response = await result.response;
-    return response.text();
+    return result.response.text();
   } catch (error) {
-    console.error("Erro na IA:", error);
-    return "Desculpe, tive um probleminha técnico. Pode repetir?";
+    console.error("Erro Gemini:", error);
+    return "Ops, tive um probleminha para processar isso. Pode tentar novamente?";
   }
 }
 
@@ -65,31 +64,33 @@ const client = new Client({
     clientId: "bot-pat-client",
     dataPath: "/home/ubuntu/pat/.wwebjs_auth",
   }),
+  webVersionCache: {
+    type: "remote",
+    remotePath: "https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2412.54.html",
+  },
   puppeteer: {
     headless: true,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"]
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   },
 });
 
 client.on("qr", (qr) => qrcode.generate(qr, { small: true }));
-
-client.on("ready", () => console.log("IA do PAT conectada e pronta!"));
+client.on("ready", () => console.log("IA do PAT Online!"));
 
 client.on("message", async (msg) => {
-  if (msg.from === "status@broadcast") return;
+  if (msg.from === "status@broadcast" || msg.isGroupMsg) return;
 
   try {
     const chat = await msg.getChat();
     await chat.sendStateTyping();
 
-    const vagas = carregarVagasAtualizadas();
-    const respostaIA = await processarComIA(msg.body, vagas);
-
-    await msg.reply(respostaIA);
-
+    const resposta = await processarComIA(msg.body);
+    await msg.reply(resposta);
   } catch (err) {
-    console.error("Erro ao processar mensagem:", err);
+    console.error("Erro ao responder:", err);
   }
 });
+
+schedule.scheduleJob("50 8 * * *", () => rodarScraper());
 
 client.initialize();
