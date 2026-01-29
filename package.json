@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
     "exceljs": "^4.4.0",
     "moment-timezone": "^0.5.45",
     "node-schedule": "^2.1.1",
