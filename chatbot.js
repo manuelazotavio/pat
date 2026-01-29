@@ -9,53 +9,47 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 const ARQUIVO_VAGAS = "./vagas_caragua.json";
+const ARQUIVO_ALERTAS = "./alertas.json";
 
-function carregarVagas() {
+function carregarJSON(caminho) {
   try {
-    if (fs.existsSync(ARQUIVO_VAGAS)) {
-      return JSON.parse(fs.readFileSync(ARQUIVO_VAGAS, "utf8"));
+    if (fs.existsSync(caminho)) {
+      return JSON.parse(fs.readFileSync(caminho, "utf8"));
     }
-    return [];
-  } catch (err) {
-    console.error("Erro ao ler arquivo de vagas:", err);
-    return [];
+  } catch (e) {
+    console.error(`Erro ao ler ${caminho}:`, e);
   }
+  return [];
 }
 
-function rodarScraper() {
-  console.log("Iniciando scraper...");
-  exec("python3 /home/ubuntu/pat/pat_v2.py", (error, stdout, stderr) => {
-    if (error) return console.error(`Erro: ${error.message}`);
-    console.log(`Scraper rodou: ${stdout}`);
-  });
+function salvarAlerta(numero, termo) {
+  let alertas = carregarJSON(ARQUIVO_ALERTAS);
+  alertas = alertas.filter(a => !(a.numero === numero && a.termo === termo));
+  alertas.push({ numero, termo });
+  fs.writeFileSync(ARQUIVO_ALERTAS, JSON.stringify(alertas, null, 2));
 }
 
-async function processarComIA(mensagemUsuario) {
-  const vagas = carregarVagas();
+async function processarComIA(mensagemUsuario, contextoVagas = null) {
+  const vagas = contextoVagas || carregarJSON(ARQUIVO_VAGAS);
   
   const prompt = `
     Você é o Assistente Virtual do PAT de Caraguatatuba.
-    Sua missão é ajudar o usuário a encontrar vagas de emprego.
+    VAGAS DISPONÍVEIS: ${JSON.stringify(vagas)}
 
-    VAGAS DISPONÍVEIS AGORA:
-    ${JSON.stringify(vagas)}
-
-    REGRAS DE RESPOSTA:
-    1. Seja humano, empático e use emojis.
-    2. Se o usuário procurar uma vaga, liste apenas as que combinam.
-    3. Se não houver a vaga exata, sugira algo parecido ou peça para ele tentar outro termo.
-    4. Informe sempre o código da vaga e o endereço do PAT (R. Taubaté, 520 - Sumaré).
-    5. Se o usuário apenas cumprimentar, explique que você pode buscar vagas pelo nome ou filtrar por requisitos.
-
-    USUÁRIO DISSE: "${mensagemUsuario}"
+    REGRAS:
+    1. Se o usuário quiser cadastrar um alerta (ex: "me avise quando tiver vaga de motorista"), responda APENAS confirmando que entendeu o termo.
+    2. Se ele buscar vagas, liste as compatíveis com código e detalhes.
+    3. Se não houver vagas, seja gentil.
+    4. Endereço: R. Taubaté, 520 - Sumaré.
+    
+    MENSAGEM: "${mensagemUsuario}"
   `;
 
   try {
     const result = await model.generateContent(prompt);
     return result.response.text();
   } catch (error) {
-    console.error("Erro Gemini:", error);
-    return "Ops, tive um probleminha para processar isso. Pode tentar novamente?";
+    return "Tive um problema técnico, mas tente novamente em instantes!";
   }
 }
 
@@ -75,22 +69,56 @@ const client = new Client({
 });
 
 client.on("qr", (qr) => qrcode.generate(qr, { small: true }));
-client.on("ready", () => console.log("IA do PAT Online!"));
+client.on("ready", () => console.log("Sistema de IA e Alertas Online!"));
 
 client.on("message", async (msg) => {
   if (msg.from === "status@broadcast" || msg.isGroupMsg) return;
 
-  try {
-    const chat = await msg.getChat();
-    await chat.sendStateTyping();
+  const texto = msg.body.toLowerCase();
 
-    const resposta = await processarComIA(msg.body);
-    await msg.reply(resposta);
-  } catch (err) {
-    console.error("Erro ao responder:", err);
+  if (texto.includes("me avise") || texto.includes("alerta") || texto.includes("cadastrar")) {
+    const termo = texto.replace(/me avise|alerta|quando|tiver|vaga|de|para/g, "").trim();
+    if (termo.length > 2) {
+      salvarAlerta(msg.from, termo);
+      return msg.reply(`✅ Ativado! Vou te avisar assim que surgirem vagas para *${termo}*.`);
+    }
   }
+
+  const resposta = await processarComIA(msg.body);
+  await msg.reply(resposta);
 });
 
-schedule.scheduleJob("50 8 * * *", () => rodarScraper());
+async function dispararAlertasDiarios() {
+  const alertas = carregarJSON(ARQUIVO_ALERTAS);
+  const vagas = carregarJSON(ARQUIVO_VAGAS);
+
+  for (const alerta of alertas) {
+    const promptAlerta = `
+      Com base nessas vagas: ${JSON.stringify(vagas)}
+      O usuário quer saber de: "${alerta.termo}".
+      Se houver vagas, crie uma mensagem de alerta curta e animada. 
+      Se não houver NADA, não responda nada, apenas ignore.
+    `;
+
+    try {
+      const result = await model.generateContent(promptAlerta);
+      const txt = result.response.text();
+      
+      if (txt.length > 10 && !txt.includes("não encontrei") && !txt.includes("desculpe")) {
+        await client.sendMessage(alerta.numero, `🔔 *Alerta Diário!*\n\n${txt}`);
+      }
+    } catch (e) {
+      console.error("Erro no disparo:", e);
+    }
+  }
+}
+
+schedule.scheduleJob("50 8 * * *", () => {
+  exec("python3 /home/ubuntu/pat/pat_v2.py", (err) => {
+    if (!err) console.log("Scraper rodou com sucesso.");
+  });
+});
+
+schedule.scheduleJob("0 9 * * *", () => dispararAlertasDiarios());
 
 client.initialize();
