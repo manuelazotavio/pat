@@ -17,7 +17,7 @@ function carregarJSON(caminho) {
       return JSON.parse(fs.readFileSync(caminho, "utf8"));
     }
   } catch (e) {
-    console.error(`Erro ao ler ${caminho}:`, e);
+    console.error(e);
   }
   return [];
 }
@@ -56,12 +56,8 @@ async function processarComIA(mensagemUsuario, contextoVagas = null) {
 const client = new Client({
   authStrategy: new LocalAuth({
     clientId: "bot-pat-client",
-    dataPath: "/home/ubuntu/pat/.wwebjs_auth",
+    dataPath: "./.wwebjs_auth",
   }),
-  webVersionCache: {
-    type: "remote",
-    remotePath: "https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2412.54.html",
-  },
   puppeteer: {
     headless: true,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
@@ -69,12 +65,17 @@ const client = new Client({
 });
 
 client.on("qr", (qr) => qrcode.generate(qr, { small: true }));
-client.on("ready", () => console.log("Sistema de IA e Alertas Online!"));
+
+client.on("ready", () => console.log("Sistema Online"));
 
 client.on("message", async (msg) => {
   if (msg.from === "status@broadcast" || msg.isGroupMsg) return;
 
   const texto = msg.body.toLowerCase();
+
+  if (texto === "menu") {
+    return msg.reply("Olá! Eu sou o assistente do PAT. Como posso ajudar?\n\n1. Perguntar sobre vagas (ex: 'quais vagas tem hoje?')\n2. Cadastrar alertas (ex: 'me avise vaga de motorista')\n3. Endereço do PAT");
+  }
 
   if (texto.includes("me avise") || texto.includes("alerta") || texto.includes("cadastrar")) {
     const termo = texto.replace(/me avise|alerta|quando|tiver|vaga|de|para/g, "").trim();
@@ -108,14 +109,14 @@ async function dispararAlertasDiarios() {
         await client.sendMessage(alerta.numero, `🔔 *Alerta Diário!*\n\n${txt}`);
       }
     } catch (e) {
-      console.error("Erro no disparo:", e);
+      console.error(e);
     }
   }
 }
 
 schedule.scheduleJob("50 8 * * *", () => {
   exec("python3 /home/ubuntu/pat/pat_v2.py", (err) => {
-    if (!err) console.log("Scraper rodou com sucesso.");
+    if (!err) console.log("Scraper ok");
   });
 });
 
