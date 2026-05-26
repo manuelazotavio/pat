@@ -7,10 +7,7 @@
 
 > Um assistente virtual inteligente que automatiza a busca e distribuição de vagas de emprego do Posto de Atendimento ao Trabalhador (PAT) de Caraguatatuba via WhatsApp.
 
-## Teste aqui: 
-> https://api.whatsapp.com/send/?phone=5512991059135&text=menu&type=phone_number&app_absent=0
 
----
 
 ## 📖 Sobre o projeto
 
